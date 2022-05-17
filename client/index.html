@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Io</title>
+    <style>
+
+        body{
+            margin: 0 auto;
+            display:flex;
+            justify-content:center;
+            flex-direction:column;
+            height:100vh;
+            width:90%;
+            max-width:1200px;
+        }
+
+        #message-container{
+            border: 1px solid #000;
+            flex-grow:1;
+            overflow: hidden;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-between;
+
+        }
+
+        #screen div {
+            background-color:#ccc;
+            padding:5px;
+        }
+
+        #screen div:nth-child(even){
+            background:#fff;
+        }
+
+        #message-container form {
+            height: 300px;
+            padding: 10px;
+            display: flex;
+            flex-direction:column;
+            width: 100%;
+        }
+
+        .content-box{
+            display: flex;
+            background-color: #fff!important;
+            padding: 10px;
+            overflow-x:hidden;
+        }
+
+        .content-box input{
+            flex-grow: 1;
+            height:30px;
+        }
+
+        .box-item{
+            margin: 8px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div id="message-container">
+        <div id="screen">
+        </div>
+        <form id="form">
+           <div class="content-box">
+            <label for="message-input" class="box-item">Message</label>
+            <input type="text" id="message-input">
+            <button type="submit" id="send-button" class="box-item">Send</button>
+           </div>
+           <div class="content-box">
+            <label for="room-input" class="box-item">Room</label>
+            <input type="text" id="room-input"/>
+            <button type="button" id="room-button" class="box-item">Join</button>
+           </div>
+        </form>
+    </div>
+    <script  type="module" src="./scripts.js"></script>
+</body>
+</html>
